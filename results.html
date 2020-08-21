@@ -1,0 +1,11 @@
+<h1>{{.Title}} {{.SearchText}}</h1>
+{{range .Data}}
+    <h2>{{.Almacen}}:</h2>
+    {{range .Productos}}
+    <div style="position: relative; width:20%; display: inline-block;">
+        <center><img src="{{.ImgURL}}" width="100" height="100"></center>
+        <b>Nombre: </b>{{.Nombre}}<br>
+        <b>Precio: </b>{{.Precio}}
+    </div>
+    {{end}}
+{{end}}
